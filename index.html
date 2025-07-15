@@ -1030,6 +1030,49 @@
         let fullscreenImageState = 'front';
         let currentCollection = 'all';
 
+        // WhatsApp order function
+        function orderWatch(watchType, quantity = 1) {
+            const watchDetails = {
+                nightsteel: {
+                    name: 'AEVORO Nightsteel',
+                    price: '$16.99',
+                    description: 'Black dial with luminous hands, stainless steel strap'
+                },
+                noir: {
+                    name: 'AEVORO Noir Eclipse',
+                    price: '$15.99',
+                    description: 'Matte black dial with Roman numerals, polished bracelet'
+                },
+                silver: {
+                    name: 'AEVORO Silver Refined',
+                    price: '$14.99',
+                    description: 'White textured dial with Roman numerals, silver-tone steel'
+                }
+            };
+
+            const watch = watchDetails[watchType];
+            const message = `Hello AEVORO Team,
+
+I would like to place an order for:
+
+🕐 Product: ${watch.name}
+📦 Quantity: ${quantity} piece(s)
+💰 Price: ${watch.price} each
+📝 Description: ${watch.description}
+
+Total: ${watch.price} × ${quantity} = $${(parseFloat(watch.price.replace('$', '')) * quantity).toFixed(2)}
+
+Please confirm availability and provide payment details.
+
+Thank you!`;
+
+            const phoneNumber = "96176998896";
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+
         // Search functionality
         const watchDatabase = [
             {
@@ -1783,8 +1826,8 @@
                                     <p class="text-gray-600 leading-relaxed text-sm">The Aevoro Nightsteel represents the perfect fusion of contemporary design and traditional craftsmanship with its sleek black dial and premium stainless steel construction.</p>
                                 </div>
                                 
-                                <button class="gold-hover-btn text-white py-3 rounded-xl font-bold text-lg shadow-lg w-full">
-                                    ADD TO CART - $16.99
+                                <button onclick="orderWatch('nightsteel')" class="gold-hover-btn text-white py-3 rounded-xl font-bold text-lg shadow-lg w-full">
+                                    ORDER VIA WHATSAPP - $16.99
                                 </button>
                             </div>
                             
@@ -1870,8 +1913,8 @@
                                     <p class="text-gray-600 leading-relaxed text-sm">A bold statement in full black featuring matte dial with subtle Roman numerals and a date window. Perfect for formal nights or minimalist style lovers.</p>
                                 </div>
                                 
-                                <button class="gold-hover-btn text-white py-3 rounded-xl font-bold text-lg shadow-lg w-full">
-                                    ADD TO CART - $15.99
+                                <button onclick="orderWatch('noir')" class="gold-hover-btn text-white py-3 rounded-xl font-bold text-lg shadow-lg w-full">
+                                    ORDER VIA WHATSAPP - $15.99
                                 </button>
                             </div>
                             
@@ -1957,8 +2000,8 @@
                                     <p class="text-gray-600 leading-relaxed text-sm">A timeless piece of elegance. Crisp white textured dial, accented by slim Roman numerals and finished with a premium silver-tone stainless steel band.</p>
                                 </div>
                                 
-                                <button class="gold-hover-btn text-white py-3 rounded-xl font-bold text-lg shadow-lg w-full">
-                                    ADD TO CART - $14.99
+                                <button onclick="orderWatch('silver')" class="gold-hover-btn text-white py-3 rounded-xl font-bold text-lg shadow-lg w-full">
+                                    ORDER VIA WHATSAPP - $14.99
                                 </button>
                             </div>
                             
