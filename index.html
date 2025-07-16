@@ -310,31 +310,12 @@
             color: #D4AF37;
         }
 
-        /* Remove bottom spacing in modal content - Comprehensive approach */
+        /* Complete removal of bottom spacing from modal content */
         #modalContent {
             padding-bottom: 0 !important;
-            margin-bottom: 0 !important;
         }
 
-        #modalContent > div:last-child {
-            margin-bottom: 0 !important;
-            padding-bottom: 0 !important;
-        }
-
-        #modalContent .space-y-4 > *:last-child,
-        #modalContent .space-y-6 > *:last-child {
-            margin-bottom: 0 !important;
-        }
-
-        #modalContent .flex.flex-col > *:last-child {
-            margin-bottom: 0 !important;
-        }
-
-        #modalContent .flex.flex-col.lg\:flex-row > div:last-child .space-y-4 > *:last-child {
-            margin-bottom: 0 !important;
-        }
-
-        #modalContent .flex.flex-col.lg\:flex-row > div:last-child {
+        #modalContent > * {
             margin-bottom: 0 !important;
         }
 
@@ -342,44 +323,198 @@
             margin-bottom: 0 !important;
         }
 
-        #modalContent .w-full.lg\:w-1\/2:last-child .space-y-4 {
+        #modalContent .space-y-4 > *:last-child {
             margin-bottom: 0 !important;
         }
 
-        #modalContent .w-full.lg\:w-1\/2:last-child .flex.space-x-3 {
-            margin-bottom: 0 !important;
-        }
-
-        #modalContent .w-full.lg\:w-1\/2:last-child > div:last-child {
-            margin-bottom: 0 !important;
-        }
-
-        #modalContent .space-y-4:last-child {
-            margin-bottom: 0 !important;
-        }
-
-        #modalContent .space-y-4 .flex.space-x-3:last-child {
-            margin-bottom: 0 !important;
-        }
-
-        #modalContent .w-full.lg\:w-1\/2 > div:last-child {
-            margin-bottom: 0 !important;
-        }
-
-        #modalContent .lg\:w-1\/2:last-child {
+        #modalContent .flex.space-x-3 {
             margin-bottom: 0 !important;
         }
 
         /* Mobile responsive improvements */
         @media (max-width: 768px) {
             .aevoro-logo .logo-watch {
-                width: 2.5rem;
-                height: 2.5rem;
+                width: 2rem;
+                height: 2rem;
             }
             
             .hero-bg .aevoro-logo .logo-watch {
-                width: 6rem;
-                height: 6rem;
+                width: 5rem;
+                height: 5rem;
+            }
+
+            /* Better mobile padding and spacing */
+            .px-4 {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .py-12 {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            .py-20 {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            .gap-6 {
+                gap: 1rem;
+            }
+
+            .gap-8 {
+                gap: 1.5rem;
+            }
+
+            /* Better text sizing on mobile */
+            .text-3xl {
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+            }
+
+            .text-4xl {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+            }
+
+            .text-5xl {
+                font-size: 2.5rem;
+                line-height: 2.75rem;
+            }
+
+            /* Better button sizing */
+            .px-6 {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .px-8 {
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .py-3 {
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+            }
+
+            .py-4 {
+                padding-top: 0.875rem;
+                padding-bottom: 0.875rem;
+            }
+
+            /* Modal content mobile improvements */
+            #modalContent {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+
+            .modal-enter {
+                margin: 0.5rem;
+            }
+
+            /* Better mobile grid spacing */
+            .grid.sm\:grid-cols-2 {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .grid.lg\:grid-cols-3 {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Newsletter mobile fix */
+            .max-w-md {
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+
+            /* Footer mobile improvements */
+            .grid.grid-cols-2.md\:grid-cols-4 {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            /* Mobile menu improvements */
+            .mobile-menu {
+                padding: 0.75rem;
+            }
+
+            /* Search improvements on mobile */
+            .search-bar {
+                margin: 0.5rem;
+                max-width: calc(100vw - 1rem);
+            }
+
+            /* Support dropdown mobile */
+            .support-dropdown {
+                margin: 0.5rem;
+                max-width: calc(100vw - 1rem);
+            }
+        }
+
+        @media (max-width: 640px) {
+            /* Extra small mobile adjustments */
+            .text-lg {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+
+            .text-xl {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+
+            .text-2xl {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+
+            .mb-6 {
+                margin-bottom: 1rem;
+            }
+
+            .mb-8 {
+                margin-bottom: 1.5rem;
+            }
+
+            .mb-16 {
+                margin-bottom: 2rem;
+            }
+
+            /* Hero section mobile */
+            .hero-bg {
+                min-height: 90vh;
+                padding: 1rem;
+            }
+
+            /* Product cards mobile */
+            .product-card .p-4 {
+                padding: 0.75rem;
+            }
+
+            .product-card .p-6 {
+                padding: 1rem;
+            }
+
+            /* Modal mobile adjustments */
+            .modal-enter {
+                margin: 0.25rem;
+                border-radius: 1rem;
+            }
+
+            #modalContent .gap-6 {
+                gap: 1rem;
+            }
+
+            #modalContent .p-4 {
+                padding: 0.75rem;
+            }
+
+            #modalContent .p-6 {
+                padding: 1rem;
             }
         }
     </style>
@@ -435,7 +570,7 @@
                             </svg>
                             <h4 class="font-semibold text-charcoal">Call Us</h4>
                         </div>
-                        <p class="text-charcoal font-bold">+961 76998896</p>
+                        <a href="https://wa.me/96176998896" class="text-charcoal font-bold hover:text-gold transition-colors duration-200">+961 76998896</a>
                         <p class="text-gray-600 text-sm">Mon-Fri 9AM-6PM (GMT+3)</p>
                         <p class="text-gray-600 text-sm">Saturday: 10:00 AM - 4:00 PM (GMT+3)</p>
                     </div>
@@ -447,7 +582,7 @@
                             </svg>
                             <h4 class="font-semibold text-charcoal">Email Support</h4>
                         </div>
-                        <p class="text-charcoal font-bold">support@aevoro.com</p>
+                        <a href="mailto:aevoro.watches@gmail.com" class="text-charcoal font-bold hover:text-gold transition-colors duration-200">aevoro.watches@gmail.com</a>
                         <p class="text-gray-600 text-sm">Response within 24 hours</p>
                     </div>
                 </div>
@@ -781,12 +916,26 @@
                     </div>
                     <div class="relative">
                         <div class="bg-gradient-to-br from-warm-gray to-gray-100 rounded-lg p-8 sm:p-12 text-center">
-                            <div class="w-32 h-32 sm:w-48 sm:h-48 mx-auto bg-gradient-to-br from-charcoal to-gray-600 rounded-full flex items-center justify-center mb-6">
-                                <div class="w-20 h-20 sm:w-32 sm:h-32 border-4 border-gold rounded-full flex items-center justify-center">
-                                    <div class="text-center">
-                                        <div class="w-2 h-8 sm:w-3 sm:h-12 bg-gold rounded-full mx-auto mb-2"></div>
-                                        <div class="w-6 h-2 sm:w-8 sm:h-3 bg-gold rounded-full mx-auto"></div>
-                                    </div>
+                            <div class="w-32 h-32 sm:w-48 sm:h-48 mx-auto bg-gradient-to-br from-charcoal to-gray-600 rounded-full flex items-center justify-center mb-6 relative">
+                                <!-- Professional Watch Icon -->
+                                <svg class="w-16 h-16 sm:w-24 sm:h-24 text-gold" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                    <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+                                    <circle cx="12" cy="4" r="1" opacity="0.7"/>
+                                    <circle cx="12" cy="20" r="1" opacity="0.7"/>
+                                    <circle cx="4" cy="12" r="1" opacity="0.7"/>
+                                    <circle cx="20" cy="12" r="1" opacity="0.7"/>
+                                    <circle cx="7.05" cy="7.05" r="0.8" opacity="0.5"/>
+                                    <circle cx="16.95" cy="7.05" r="0.8" opacity="0.5"/>
+                                    <circle cx="7.05" cy="16.95" r="0.8" opacity="0.5"/>
+                                    <circle cx="16.95" cy="16.95" r="0.8" opacity="0.5"/>
+                                </svg>
+                                <!-- Crown detail -->
+                                <div class="absolute -top-2 flex items-center justify-center">
+                                    <svg class="w-4 h-4 sm:w-6 sm:h-6 text-gold" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 16L12 8l7 8H5z"/>
+                                        <rect x="11" y="12" width="2" height="4"/>
+                                    </svg>
                                 </div>
                             </div>
                             <h3 class="text-lg sm:text-xl font-serif font-semibold mb-4">Luxury looks. Fair prices. Timeless style.</h3>
@@ -823,19 +972,9 @@
                         </h3>
                         <p class="text-gray-400 mb-4 text-sm sm:text-base">Affordable Elegance. Everyday Confidence.</p>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-gray-400 hover:text-gold transition-colors duration-200">
+                            <a href="https://www.instagram.com/aevoro.official?igsh=MWpkcHdqejlyaW1uOQ==" target="_blank" class="text-gray-400 hover:text-gold transition-colors duration-200">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-gold transition-colors duration-200">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-gold transition-colors duration-200">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.223.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.758-1.378l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                                 </svg>
                             </a>
                         </div>
@@ -859,7 +998,7 @@
                     <div>
                         <h4 class="font-semibold mb-4">Company</h4>
                         <ul class="space-y-2 text-gray-400 text-sm">
-                            <li><button onclick="showInfoModal('about')" class="hover:text-gold transition-colors duration-200">About AEVORO</button></li>
+                            <li><button onclick="showInfoModal('about')" class="hover:text-gold transition-colors duration-200 text-center">About AEVORO</button></li>
                             <li><button onclick="showInfoModal('mission')" class="hover:text-gold transition-colors duration-200">Our Mission</button></li>
                         </ul>
                     </div>
@@ -1117,7 +1256,7 @@
 
     <!-- Watch Details Modal -->
     <div id="watchModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-3xl w-full h-[85vh] overflow-hidden shadow-2xl modal-enter">
+        <div class="bg-white rounded-2xl max-w-3xl w-full h-[75vh] overflow-hidden shadow-2xl modal-enter">
             <div class="h-full flex flex-col">
                 <div class="text-center p-4 border-b border-gray-200 flex-shrink-0">
                     <h2 id="modalTitle" class="text-xl sm:text-2xl font-serif font-bold text-charcoal"></h2>
@@ -1266,12 +1405,12 @@ Thank you!`;
             window.open(whatsappUrl, '_blank');
         }
 
-        // Search functionality
+        // Enhanced search functionality with stricter multi-word matching
         const watchDatabase = [
             {
                 id: 'nightsteel',
                 name: 'Aevoro Nightsteel',
-                keywords: ['nightsteel', 'black', 'dark', 'night', 'steel', 'luminous', 'sleek', 'modern', 'sophisticated', 'stainless steel', 'swiss automatic'],
+                keywords: ['aevoro', 'nightsteel', 'black', 'dark', 'night', 'steel', 'stainless', 'stainless steel', 'luminous', 'sleek', 'modern', 'sophisticated', 'swiss', 'automatic', 'watch', 'timepiece', 'dial', 'strap', 'classic', 'elegant', 'bracelet', 'band', 'matte', 'hands'],
                 price: '$16.99',
                 description: 'Black dial with luminous hands, stainless steel strap',
                 image: 'Firstwatchfrontview.png',
@@ -1280,7 +1419,7 @@ Thank you!`;
             {
                 id: 'noir',
                 name: 'Aevoro Noir Eclipse',
-                keywords: ['noir', 'eclipse', 'black', 'matte', 'roman', 'numerals', 'formal', 'minimalist', 'polished', 'bracelet', 'date'],
+                keywords: ['aevoro', 'noir', 'eclipse', 'black', 'matte', 'roman', 'numerals', 'formal', 'minimalist', 'polished', 'bracelet', 'date', 'steel', 'stainless', 'stainless steel', 'watch', 'timepiece', 'dial', 'classic', 'elegant', 'band', 'strap', 'numbers', 'window'],
                 price: '$15.99',
                 description: 'Matte black dial with Roman numerals, polished bracelet',
                 image: 'Secondwatchtiltedangle.png',
@@ -1289,13 +1428,68 @@ Thank you!`;
             {
                 id: 'silver',
                 name: 'Aevoro Silver Refined',
-                keywords: ['silver', 'refined', 'white', 'textured', 'elegant', 'classic', 'roman', 'numerals', 'steel', 'bright', 'professional'],
+                keywords: ['aevoro', 'silver', 'refined', 'white', 'textured', 'elegant', 'classic', 'roman', 'numerals', 'steel', 'stainless', 'stainless steel', 'bright', 'professional', 'watch', 'timepiece', 'dial', 'tone', 'band', 'strap', 'bracelet', 'numbers', 'clean'],
                 price: '$14.99',
                 description: 'White textured dial with Roman numerals, silver-tone steel',
                 image: 'Thirdwatchfrontview.png',
                 collection: 'classic'
             }
         ];
+
+        // List of filler words to ignore in search
+        const fillerWords = ['with', 'and', 'or', 'the', 'a', 'an', 'in', 'on', 'at', 'for', 'to', 'of', 'by', 'from', 'has', 'have', 'is', 'are', 'was', 'were', 'be', 'been', 'being'];
+
+        function calculateSearchScore(watch, queryWords) {
+            let score = 0;
+            let matchedWords = 0;
+            let requiredMatches = Math.max(1, Math.ceil(queryWords.length * 0.7)); // Require at least 70% of words to match
+
+            // Check how many query words match the watch keywords
+            queryWords.forEach(queryWord => {
+                const hasExactMatch = watch.keywords.some(keyword => keyword === queryWord);
+                const hasPartialMatch = watch.keywords.some(keyword => keyword.includes(queryWord) || queryWord.includes(keyword));
+                
+                if (hasExactMatch) {
+                    score += 15; // Higher score for exact matches
+                    matchedWords++;
+                } else if (hasPartialMatch) {
+                    score += 8; // Lower score for partial matches
+                    matchedWords++;
+                }
+                
+                // Check name and description for matches
+                if (watch.name.toLowerCase().includes(queryWord) || watch.description.toLowerCase().includes(queryWord)) {
+                    score += 5;
+                    if (!hasExactMatch && !hasPartialMatch) {
+                        matchedWords++;
+                    }
+                }
+            });
+
+            // Calculate match percentage
+            const matchPercentage = matchedWords / queryWords.length;
+            
+            // Only return watches that meet the minimum match requirement
+            if (matchedWords < requiredMatches) {
+                return { score: 0, matchedWords, matchPercentage, meetsThreshold: false };
+            }
+
+            // Bonus points for matching multiple words
+            if (matchedWords > 1) {
+                score += (matchedWords - 1) * 10;
+            }
+
+            // Strong bonus for high relevance
+            if (matchPercentage >= 0.8) {
+                score += 30; // Very high relevance bonus
+            } else if (matchPercentage >= 0.6) {
+                score += 20; // High relevance bonus
+            } else if (matchPercentage >= 0.4) {
+                score += 10; // Medium relevance bonus
+            }
+
+            return { score, matchedWords, matchPercentage, meetsThreshold: true };
+        }
 
         function openSearch() {
             const overlay = document.getElementById('searchOverlay');
@@ -1498,7 +1692,7 @@ Thank you!`;
                                         </svg>
                                         <h3 class="text-lg font-semibold">Phone Support</h3>
                                     </div>
-                                    <p class="text-charcoal font-bold text-lg">+961 76998896</p>
+                                    <a href="https://wa.me/96176998896" class="text-charcoal font-bold text-lg hover:text-gold transition-colors duration-200">+961 76998896</a>
                                     <p class="text-gray-600 text-sm">Monday - Friday: 9:00 AM - 6:00 PM (GMT+3)</p>
                                     <p class="text-gray-600 text-sm">Saturday: 10:00 AM - 4:00 PM (GMT+3)</p>
                                 </div>
@@ -1510,7 +1704,7 @@ Thank you!`;
                                         </svg>
                                         <h3 class="text-lg font-semibold">Email Support</h3>
                                     </div>
-                                    <p class="text-charcoal font-bold">support@aevoro.com</p>
+                                    <a href="mailto:aevoro.watches@gmail.com" class="text-charcoal font-bold hover:text-gold transition-colors duration-200">aevoro.watches@gmail.com</a>
                                     <p class="text-gray-600 text-sm">Response time: Within 24 hours</p>
                                 </div>
                             </div>
@@ -1518,19 +1712,9 @@ Thank you!`;
                             <div>
                                 <h3 class="text-lg font-semibold text-charcoal mb-3">Social Media</h3>
                                 <div class="flex space-x-4">
-                                    <a href="#" class="text-gray-400 hover:text-gold transition-colors duration-200">
+                                    <a href="https://www.instagram.com/aevoro.official?igsh=MWpkcHdqejlyaW1uOQ==" target="_blank" class="text-gray-400 hover:text-gold transition-colors duration-200">
                                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="text-gray-400 hover:text-gold transition-colors duration-200">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.223.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.758-1.378l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="text-gray-400 hover:text-gold transition-colors duration-200">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                                         </svg>
                                     </a>
                                 </div>
@@ -1541,7 +1725,7 @@ Thank you!`;
                 about: {
                     title: 'About AEVORO',
                     content: `
-                        <div class="space-y-4">
+                        <div class="space-y-4 text-center">
                             <div class="text-center">
                                 <img src="Firstwatchtiltedangle.png" alt="AEVORO" class="w-24 h-24 mx-auto mb-3 object-contain">
                                 <p class="text-base text-gray-600 italic">"Affordable Elegance. Everyday Confidence."</p>
@@ -1578,25 +1762,26 @@ Thank you!`;
                     content: `
                         <div class="space-y-4">
                             <div>
-                                <p class="text-gray-600 text-sm mb-3">Effective Date: January 2025</p>
-                                <p class="text-gray-600 leading-relaxed text-sm">
-                                    At AEVORO, we value your privacy and handle your personal information with care. We collect only essential contact details needed for order processing, delivery coordination, and customer support. Our commitment to data protection ensures your information is secure and never shared with unauthorized third parties.
+                                <p class="text-gray-600 text-sm mb-3">Effective Date: July 2025</p>
+                                <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                                    At AEVORO, we respect your privacy and are committed to protecting your personal information. We only collect the data necessary to process your order, coordinate delivery, and provide customer support.
                                 </p>
                             </div>
                             
                             <div>
-                                <h3 class="text-base font-semibold text-charcoal mb-2">Data Collection & Use</h3>
-                                <ul class="space-y-1 text-gray-600 text-sm">
-                                    <li>• Contact information for WhatsApp orders and delivery</li>
-                                    <li>• Delivery addresses within Lebanon only</li>
-                                    <li>• Order history for customer service support</li>
-                                    <li>• Payment confirmation (no financial data stored)</li>
+                                <h3 class="text-base font-semibold text-charcoal mb-2">Information We Collect</h3>
+                                <ul class="space-y-1 text-gray-600 text-sm mb-4">
+                                    <li>• Your name and contact details (for WhatsApp communication)</li>
+                                    <li>• Delivery address (within Lebanon only)</li>
+                                    <li>• Order details and history (for support purposes)</li>
+                                    <li>• Payment confirmation status (we do not store or process any credit card or banking information)</li>
                                 </ul>
                             </div>
                             
                             <div class="bg-charcoal text-white rounded-lg p-3">
                                 <p class="text-sm">
-                                    Questions about privacy? Contact us at support@aevoro.com or call +961 76998896.
+                                    <strong>Have questions about Privacy?</strong><br>
+                                    Contact us at <a href="mailto:aevoro.watches@gmail.com" class="text-gold hover:underline">aevoro.watches@gmail.com</a> or call <a href="https://wa.me/96176998896" class="text-gold hover:underline">‪+961 76 998 896‬</a>.
                                 </p>
                             </div>
                         </div>
@@ -1607,15 +1792,22 @@ Thank you!`;
                     content: `
                         <div class="space-y-4">
                             <div>
-                                <p class="text-gray-600 text-sm mb-3">Effective Date: January 2025</p>
-                                <p class="text-gray-600 leading-relaxed text-sm">
-                                    By purchasing from AEVORO, you agree to these terms. Orders are placed via WhatsApp. Payment is made upon delivery in USD or Lebanese pounds. We offer a 30-day return policy for unworn watches with original packaging.
+                                <p class="text-gray-600 text-sm mb-3">Effective Date: July 2025</p>
+                                <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                                    By purchasing from AEVORO, you agree to the following terms:
                                 </p>
+                                <ul class="space-y-2 text-gray-600 text-sm mb-4">
+                                    <li>• Orders are placed via WhatsApp.</li>
+                                    <li>• Payment is made upon delivery, in USD or Lebanese Pounds.</li>
+                                    <li>• You must provide your accurate location. Our trusted delivery team will contact you to confirm the details and ensure smooth delivery.</li>
+                                    <li>• We do not accept installment payments (تقسيط).</li>
+                                </ul>
                             </div>
                             
                             <div class="bg-charcoal text-white rounded-lg p-3">
                                 <p class="text-sm">
-                                    Questions about terms? Contact us at support@aevoro.com or call +961 76998896.
+                                    <strong>Have questions about these terms?</strong><br>
+                                    Contact us at <a href="mailto:aevoro.watches@gmail.com" class="text-gold hover:underline">aevoro.watches@gmail.com</a> or call <a href="https://wa.me/96176998896" class="text-gold hover:underline">‪+961 76 998 896‬</a>.
                                 </p>
                             </div>
                         </div>
@@ -1634,7 +1826,7 @@ Thank you!`;
             document.getElementById('infoModal').classList.add('hidden');
         }
 
-        // Search input handler
+        // Enhanced search input handler with stricter filtering
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const query = e.target.value.toLowerCase().trim();
             const results = document.getElementById('searchResults');
@@ -1652,39 +1844,69 @@ Thank you!`;
                 return;
             }
             
-            const matches = watchDatabase.filter(watch => 
-                watch.keywords.some(keyword => keyword.includes(query)) ||
-                watch.name.toLowerCase().includes(query) ||
-                watch.description.toLowerCase().includes(query)
-            );
+            // Split query into individual words, clean them, and filter out filler words
+            const queryWords = query.split(/\s+/)
+                .map(word => word.trim())
+                .filter(word => word.length > 0 && !fillerWords.includes(word))
+                .filter((word, index, arr) => arr.indexOf(word) === index); // Remove duplicates
+            
+            if (queryWords.length === 0) {
+                hint.textContent = 'Try using more specific search terms...';
+                return;
+            }
+            
+            // Calculate relevance score for each watch
+            const watchesWithScores = watchDatabase.map(watch => {
+                const searchResult = calculateSearchScore(watch, queryWords);
+                return {
+                    ...watch,
+                    ...searchResult
+                };
+            });
+            
+            // Filter watches that meet the threshold and sort by relevance score
+            const matches = watchesWithScores
+                .filter(watch => watch.meetsThreshold && watch.score > 0)
+                .sort((a, b) => b.score - a.score);
             
             if (matches.length > 0) {
-                results.innerHTML = matches.map(watch => `
-                    <div class="p-3 hover:bg-gray-50 rounded-lg cursor-pointer border border-gray-200 flex items-center space-x-3" onclick="selectWatch('${watch.id}', '${watch.collection}')">
-                        <img src="${watch.image}" alt="${watch.name}" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
-                        <div class="flex-1">
-                            <h4 class="font-semibold text-charcoal text-sm sm:text-base">${watch.name}</h4>
-                            <p class="text-xs sm:text-sm text-gray-600">${watch.description}</p>
-                            <span class="text-base sm:text-lg font-bold text-charcoal">${watch.price}</span>
+                results.innerHTML = matches.map(watch => {
+                    // Create a relevance indicator
+                    const relevanceLevel = watch.matchPercentage >= 0.8 ? 'Excellent' : 
+                                          watch.matchPercentage >= 0.6 ? 'Good' : 'Fair';
+                    const relevanceColor = watch.matchPercentage >= 0.8 ? 'text-green-600' : 
+                                          watch.matchPercentage >= 0.6 ? 'text-blue-600' : 'text-orange-600';
+                    
+                    return `
+                        <div class="p-3 hover:bg-gray-50 rounded-lg cursor-pointer border border-gray-200 flex items-center space-x-3" onclick="selectWatch('${watch.id}', '${watch.collection}')">
+                            <img src="${watch.image}" alt="${watch.name}" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-charcoal text-sm sm:text-base">${watch.name}</h4>
+                                <p class="text-xs sm:text-sm text-gray-600">${watch.description}</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-base sm:text-lg font-bold text-charcoal">${watch.price}</span>
+                                    <span class="text-xs ${relevanceColor}">Match: ${relevanceLevel}</span>
+                                </div>
+                            </div>
+                            <div class="text-gold">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="text-gold">
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </div>
-                    </div>
-                `).join('');
+                    `;
+                }).join('');
                 results.style.maxHeight = '300px';
-                hint.textContent = `Found ${matches.length} result${matches.length > 1 ? 's' : ''}`;
+                hint.textContent = `Found ${matches.length} result${matches.length > 1 ? 's' : ''} matching your criteria`;
             } else {
                 results.innerHTML = `
                     <div class="p-4 text-center text-gray-500">
-                        <p>No watches found matching "${query}"</p>
-                        <p class="text-sm mt-1">Try searching for: black, silver, nightsteel, noir, elegant...</p>
+                        <p>No watches found matching "${queryWords.join(' ')}"</p>
+                        <p class="text-sm mt-1">Try specific terms like: "black stainless", "roman numerals", "white dial", etc.</p>
                     </div>
                 `;
                 results.style.maxHeight = '150px';
-                hint.textContent = 'No matches found. Try different keywords.';
+                hint.textContent = 'No matches found. Try different or more specific keywords.';
             }
         });
 
@@ -1972,7 +2194,7 @@ Thank you!`;
                 nightsteel: {
                     title: 'Aevoro Nightsteel',
                     content: `
-                        <div class="flex flex-col lg:flex-row gap-6" style="margin-bottom: 0 !important;">
+                        <div class="flex flex-col lg:flex-row gap-6 mb-0">
                             <!-- Left Side: Image and Price Info -->
                             <div class="w-full lg:w-1/2 flex flex-col">
                                 <div class="bg-gradient-to-br from-warm-gray to-gray-100 rounded-xl p-4 mb-4">
@@ -1983,7 +2205,7 @@ Thank you!`;
                                 </div>
                                 
                                 <!-- Price and Description Section -->
-                                <div class="bg-warm-gray rounded-xl p-4">
+                                <div class="bg-warm-gray rounded-xl p-4 mb-4">
                                     <div class="flex items-center justify-between mb-3">
                                         <span class="text-xl sm:text-2xl font-bold text-charcoal">$16.99</span>
                                         <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">In Stock</span>
@@ -1991,14 +2213,14 @@ Thank you!`;
                                     <p class="text-gray-600 leading-relaxed text-sm">The Aevoro Nightsteel represents the perfect fusion of contemporary design and traditional craftsmanship with its sleek black dial and premium stainless steel construction.</p>
                                 </div>
                                 
-                                <button onclick="orderWatch('nightsteel')" class="gold-hover-btn text-white py-3 rounded-xl font-bold text-base sm:text-lg shadow-lg w-full mt-4">
+                                <button onclick="orderWatch('nightsteel')" class="gold-hover-btn text-white py-3 rounded-xl font-bold text-base sm:text-lg shadow-lg w-full">
                                     ORDER VIA WHATSAPP - $16.99
                                 </button>
                             </div>
                             
                             <!-- Right Side: Technical Details and Actions -->
-                            <div class="w-full lg:w-1/2" style="margin-bottom: 0 !important;">
-                                <div class="space-y-4" style="margin-bottom: 0 !important;">
+                            <div class="w-full lg:w-1/2">
+                                <div class="space-y-4">
                                     <div class="bg-white border border-gray-200 rounded-xl p-4">
                                         <h3 class="font-bold text-base sm:text-lg mb-3 text-charcoal border-b border-gray-200 pb-2">Technical Specifications</h3>
                                         <div class="grid grid-cols-1 gap-2 text-sm">
@@ -2045,7 +2267,7 @@ Thank you!`;
                                         </ul>
                                     </div>
                                     
-                                    <div class="flex space-x-3" style="margin-bottom: 0 !important;">
+                                    <div class="flex space-x-3 mb-0">
                                         <button onclick="shareWatch('nightsteel')" class="flex-1 border border-charcoal text-charcoal py-2 rounded-lg font-medium text-sm hover:bg-charcoal hover:text-white transition-colors duration-300">
                                             SHARE
                                         </button>
@@ -2058,7 +2280,7 @@ Thank you!`;
                 noir: {
                     title: 'Aevoro Noir Eclipse',
                     content: `
-                        <div class="flex flex-col lg:flex-row gap-6" style="margin-bottom: 0 !important;">
+                        <div class="flex flex-col lg:flex-row gap-6 mb-0">
                             <!-- Left Side: Image and Price Info -->
                             <div class="w-full lg:w-1/2 flex flex-col">
                                 <div class="bg-gradient-to-br from-warm-gray to-gray-100 rounded-xl p-4 mb-4">
@@ -2069,7 +2291,7 @@ Thank you!`;
                                 </div>
                                 
                                 <!-- Price and Description Section -->
-                                <div class="bg-warm-gray rounded-xl p-4">
+                                <div class="bg-warm-gray rounded-xl p-4 mb-4">
                                     <div class="flex items-center justify-between mb-3">
                                         <span class="text-xl sm:text-2xl font-bold text-charcoal">$15.99</span>
                                         <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">In Stock</span>
@@ -2077,14 +2299,14 @@ Thank you!`;
                                     <p class="text-gray-600 leading-relaxed text-sm">A bold statement in full black featuring matte dial with subtle Roman numerals and a date window. Perfect for formal nights or minimalist style lovers.</p>
                                 </div>
                                 
-                                <button onclick="orderWatch('noir')" class="gold-hover-btn text-white py-3 rounded-xl font-bold text-base sm:text-lg shadow-lg w-full mt-4">
+                                <button onclick="orderWatch('noir')" class="gold-hover-btn text-white py-3 rounded-xl font-bold text-base sm:text-lg shadow-lg w-full">
                                     ORDER VIA WHATSAPP - $15.99
                                 </button>
                             </div>
                             
                             <!-- Right Side: Technical Details and Actions -->
-                            <div class="w-full lg:w-1/2" style="margin-bottom: 0 !important;">
-                                <div class="space-y-4" style="margin-bottom: 0 !important;">
+                            <div class="w-full lg:w-1/2">
+                                <div class="space-y-4">
                                     <div class="bg-white border border-gray-200 rounded-xl p-4">
                                         <h3 class="font-bold text-base sm:text-lg mb-3 text-charcoal border-b border-gray-200 pb-2">Technical Specifications</h3>
                                         <div class="grid grid-cols-1 gap-2 text-sm">
@@ -2131,7 +2353,7 @@ Thank you!`;
                                         </ul>
                                     </div>
                                     
-                                    <div class="flex space-x-3" style="margin-bottom: 0 !important;">
+                                    <div class="flex space-x-3 mb-0">
                                         <button onclick="shareWatch('noir')" class="flex-1 border border-charcoal text-charcoal py-2 rounded-lg font-medium text-sm hover:bg-charcoal hover:text-white transition-colors duration-300">
                                             SHARE
                                         </button>
@@ -2144,7 +2366,7 @@ Thank you!`;
                 silver: {
                     title: 'Aevoro Silver Refined',
                     content: `
-                        <div class="flex flex-col lg:flex-row gap-6" style="margin-bottom: 0 !important;">
+                        <div class="flex flex-col lg:flex-row gap-6 mb-0">
                             <!-- Left Side: Image and Price Info -->
                             <div class="w-full lg:w-1/2 flex flex-col">
                                 <div class="bg-gradient-to-br from-warm-gray to-gray-100 rounded-xl p-4 mb-4">
@@ -2155,7 +2377,7 @@ Thank you!`;
                                 </div>
                                 
                                 <!-- Price and Description Section -->
-                                <div class="bg-warm-gray rounded-xl p-4">
+                                <div class="bg-warm-gray rounded-xl p-4 mb-4">
                                     <div class="flex items-center justify-between mb-3">
                                         <span class="text-xl sm:text-2xl font-bold text-charcoal">$14.99</span>
                                         <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">In Stock</span>
@@ -2163,14 +2385,14 @@ Thank you!`;
                                     <p class="text-gray-600 leading-relaxed text-sm">A timeless piece of elegance. Crisp white textured dial, accented by slim Roman numerals and finished with a premium silver-tone stainless steel band.</p>
                                 </div>
                                 
-                                <button onclick="orderWatch('silver')" class="gold-hover-btn text-white py-3 rounded-xl font-bold text-base sm:text-lg shadow-lg w-full mt-4">
+                                <button onclick="orderWatch('silver')" class="gold-hover-btn text-white py-3 rounded-xl font-bold text-base sm:text-lg shadow-lg w-full">
                                     ORDER VIA WHATSAPP - $14.99
                                 </button>
                             </div>
                             
                             <!-- Right Side: Technical Details and Actions -->
-                            <div class="w-full lg:w-1/2" style="margin-bottom: 0 !important;">
-                                <div class="space-y-4" style="margin-bottom: 0 !important;">
+                            <div class="w-full lg:w-1/2">
+                                <div class="space-y-4">
                                     <div class="bg-white border border-gray-200 rounded-xl p-4">
                                         <h3 class="font-bold text-base sm:text-lg mb-3 text-charcoal border-b border-gray-200 pb-2">Technical Specifications</h3>
                                         <div class="grid grid-cols-1 gap-2 text-sm">
@@ -2217,7 +2439,7 @@ Thank you!`;
                                         </ul>
                                     </div>
                                     
-                                    <div class="flex space-x-3" style="margin-bottom: 0 !important;">
+                                    <div class="flex space-x-3 mb-0">
                                         <button onclick="shareWatch('silver')" class="flex-1 border border-charcoal text-charcoal py-2 rounded-lg font-medium text-sm hover:bg-charcoal hover:text-white transition-colors duration-300">
                                             SHARE
                                         </button>
